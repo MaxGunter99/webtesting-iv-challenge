@@ -59,16 +59,3 @@ describe('POST /guardians', () => {
     });
 
 });
-
-describe('DELETE /guardians/:id', () => {
-    it('should remove the provided Guardian from db', async () => {
-        await db('guardians').insert({
-            name: "Nebula",
-            appearence: "Cyborg",
-            weapon: "Batteries Included"
-        });
-
-        const res = await request(server).delete('/guardians/1');
-        expect( res.status ).toBe( 200 )
-    })
-});

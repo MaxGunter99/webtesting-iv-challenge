@@ -37,9 +37,7 @@ server.delete('/guardians/:id', async ( req, res )  => {
             res.status( 404 ).end({ message: 'Guardian not found'})
         } res.json( ind );
     } catch ( err ) {
-        res.status( 500 ).json({
-            message: 'Server Error Deleting'
-        });
+        res.status( 500 ).json({ message: 'Server Error Deleting' });
     }
 });
 

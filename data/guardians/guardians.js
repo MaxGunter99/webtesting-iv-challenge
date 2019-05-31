@@ -5,7 +5,6 @@ module.exports = {
   insert,
   remove,
   getAll,
-  findById
 };
 
 async function insert( guardian ) {
@@ -24,8 +23,4 @@ function remove(id) {
 
 function getAll() {
   return db( "guardians" );
-}
-
-function findById( id ) {
-  return null;
 }
